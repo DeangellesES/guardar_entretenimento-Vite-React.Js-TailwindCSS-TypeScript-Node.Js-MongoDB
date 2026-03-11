@@ -42,6 +42,8 @@ function Register() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              pattern="^[^\s@]+@[^\s@]+\.[a-zA-Z]{3,}$"  
+              title="Digite um email válido, exemplo: email@email.com"
               className="w-full rounded-md bg-slate-900 border border-slate-700 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
               required
             />
