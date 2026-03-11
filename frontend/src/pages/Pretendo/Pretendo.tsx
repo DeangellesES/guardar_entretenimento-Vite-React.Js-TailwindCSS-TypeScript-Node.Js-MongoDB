@@ -582,7 +582,7 @@ export default function Pretendo() {
                                                                     : item.capa
                                                             }
                                                             alt={item.titulo}
-                                                            className="w-full h-80 object-cover my-4 rounded-md border border-slate-700"
+                                                            className="w-50 aspect-[2/3] object-cover my-4 rounded-md border border-slate-700 mx-auto"
                                                         />
                                                     ) : (
                                                         <div className="flex flex-col items-center gap-2 my-4">
