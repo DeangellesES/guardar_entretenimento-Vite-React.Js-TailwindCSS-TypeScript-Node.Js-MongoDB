@@ -4,8 +4,9 @@ import Pretendo from "./pages/Pretendo/Pretendo";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import { useAuth } from "./contexts/AuthContext";
+import type { ReactNode } from "react";
 
-function ProtectedRoute({ children }: { children: JSX.Element }) {
+function ProtectedRoute({ children }: { children: ReactNode }) {
   const { isAuthenticated, isLoading } = useAuth();
 
   if (isLoading) {
