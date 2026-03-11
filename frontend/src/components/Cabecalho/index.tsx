@@ -24,17 +24,17 @@ function Cabecalho() {
     }
 
     return (
-        <header className="py-4 px-6 flex items-center justify-between  text-white font-bold fixed w-full z-20 border-b border-gray-300/20 bg-[rgba(1,4,48,0.6)] backdrop-blur-md">
+        <header className="py-4 px-6 flex items-center justify-between text-white font-bold fixed w-full z-20 border-b border-gray-300/20 bg-[rgba(1,4,48,0.6)] backdrop-blur-md sm:items-center">
 
-            <div className="w-[120px]"></div>
+            <div className="w-[120px] hidden md:block"></div>
 
-            <nav className="flex gap-8">
-                <Link to="/">Assistindo</Link>
+            <nav className="flex gap-4 sm:gap-10 justify-center sm:justify-start items-center">
+                <Link to="/" className="sm:text-lg">Assistindo</Link>
                 <Link to="/pretendo">Quero Assistir</Link>
             </nav>
 
             {isAuthenticated && (
-                <div className="flex items-center gap-3 text-sm">
+                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-sm">
                     <span className="text-gray-200">{user?.email}</span>
                     <button
                         onClick={handleLogout}
