@@ -379,7 +379,7 @@ export default function Guardar() {
   return (
     <>
       <Cabecalho />
-      <section className="flex flex-col px-50 gap-4 pt-20 bg-slate-950 h-full text-white">
+      <section className="flex flex-col px-7 md:px-30 lg:px-50 gap-4 pt-30 sm:pt-30 bg-slate-950 h-full text-white">
         <h1 className="text-2xl font-bold flex items-center">
           <IoPlayOutline className='text-blue-700 text-5xl bg-[#020749] rounded-lg mr-4 animate-pulse' />
           Watch and Save
@@ -401,7 +401,7 @@ export default function Guardar() {
           <form
             ref={formRef}
             onSubmit={handleRegister}
-            className="flex flex-col px-20 gap-2 flex-wrap border border-slate-800 rounded-lg p-5 bg-[#000220]"
+            className="flex flex-col px-10 sm:px-20 gap-2 flex-wrap border border-slate-800 rounded-lg p-5 bg-[#000220]"
           >
 
             <h1 className='text-2xl font-bold'>Novo item</h1>
@@ -689,7 +689,7 @@ export default function Guardar() {
                       <div
                         key={item._id}
                         data-carousel-card
-                        className="flex-shrink-0 snap-start flex justify-center border border-slate-800 p-4 rounded-lg bg-[#010430] relative min-w-[200px] w-[calc((100%-2rem)/3)]"
+                        className="flex-shrink-0 snap-start flex justify-center border border-slate-800 p-4 rounded-lg bg-[#010430] relative min-w-[250px] sm:min-w-[200px] w-[calc((100%-2rem)/3)]"
                       >
                         <div>
                           <p className="text-2xl"><strong>{item.titulo}</strong></p>
