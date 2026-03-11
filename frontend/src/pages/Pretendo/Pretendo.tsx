@@ -336,7 +336,7 @@ export default function Pretendo() {
     return (
         <>
             <Cabecalho />
-            <section className="flex flex-col px-50 gap-4 pt-20 bg-slate-950 h-full text-white">
+            <section className="flex flex-col px-7 md:px-30 lg:px-40 gap-4 pt-30 sm:pt-30 bg-slate-950 h-full text-white">
                 <h1 className="text-2xl font-bold flex items-center">
                     <IoPlayOutline className='text-blue-700 text-5xl bg-[#020749] rounded-lg mr-4 animate-pulse' />
                     Quero Assistir
@@ -356,7 +356,11 @@ export default function Pretendo() {
 
                 {/* INICIO FORMULARIO */}
                 {mostrarFormulario && (
-                    <form ref={formRef} onSubmit={handleRegister} className="flex flex-col px-20 gap-2 flex-wrap border border-slate-800 rounded-lg p-5 bg-[#000220]">
+                    <form
+                        ref={formRef}
+                        onSubmit={handleRegister}
+                        className="flex flex-col px-10 sm:px-20 gap-2 flex-wrap border border-slate-800 rounded-lg p-5 bg-[#000220]"
+                    >
                         <h1 className='text-2xl font-bold'>Novo item</h1>
 
                         {/* inicio label e input titulo */}
@@ -520,7 +524,7 @@ export default function Pretendo() {
 
                 {/* INICIO CONTEUDO ADICIONADO */}
                 {/* INICIO CARROSSÉIS POR TIPO — 3 itens visíveis na tela */}
-                <div className="flex flex-col gap-10 px-2 mt-10 mb-10">
+                <div className="flex flex-col gap-10 md:px-2 mt-10 mb-10">
                     {ORDEM_TIPOS.map((tipoKey) => {
                         const itensDoTipo = itemsPorTipo[tipoKey];
                         if (!itensDoTipo?.length) return null;
@@ -561,7 +565,7 @@ export default function Pretendo() {
                                             <div
                                                 key={item._id}
                                                 data-carousel-card
-                                                className="flex-shrink-0 snap-start flex justify-center border border-slate-800 p-4 rounded-lg bg-[#010430] relative min-w-[200px] w-[calc((100%-2rem)/3)]"
+                                                className="flex-shrink-0 snap-start flex justify-center border border-slate-800 p-4 rounded-lg bg-[#010430] relative min-w-[230px] md:min-w-[200px] w-[calc((100%-2rem)/3)]"
                                             >
                                                 <div>
                                                     <p className="text-2xl"><strong>{item.titulo}</strong></p>
@@ -621,7 +625,7 @@ export default function Pretendo() {
                                             <IoChevronForward className="text-xl" />
                                         </button>
                                     )}
-                                    
+
                                 </div>
                             </div>
                         );

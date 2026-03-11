@@ -379,7 +379,7 @@ export default function Guardar() {
   return (
     <>
       <Cabecalho />
-      <section className="flex flex-col px-7 md:px-30 lg:px-50 gap-4 pt-30 sm:pt-30 bg-slate-950 h-full text-white">
+      <section className="flex flex-col px-7 md:px-30 lg:px-40 gap-4 pt-30 sm:pt-30 bg-slate-950 h-full text-white">
         <h1 className="text-2xl font-bold flex items-center">
           <IoPlayOutline className='text-blue-700 text-5xl bg-[#020749] rounded-lg mr-4 animate-pulse' />
           Watch and Save
@@ -648,7 +648,7 @@ export default function Guardar() {
         {/* FIM DO FORMULARIO */}
 
         {/* INICIO CARROSSÉIS POR TIPO — Assistir */}
-        <div className="flex flex-col gap-10 px-2 mt-10 mb-10">
+        <div className="flex flex-col gap-10 md:px-2 mt-10 mb-10">
           {ORDEM_TIPOS.map((tipoKey) => {
             const itensDoTipo = itemsPorTipo[tipoKey];
             if (!itensDoTipo?.length) return null;
@@ -689,7 +689,7 @@ export default function Guardar() {
                       <div
                         key={item._id}
                         data-carousel-card
-                        className="flex-shrink-0 snap-start flex justify-center border border-slate-800 p-4 rounded-lg bg-[#010430] relative min-w-[250px] sm:min-w-[200px] w-[calc((100%-2rem)/3)]"
+                        className="flex-shrink-0 snap-start flex justify-center border border-slate-800 p-4 rounded-lg bg-[#010430] relative min-w-[230px] md:min-w-[200px] w-[calc((100%-3rem)/3)]"
                       >
                         <div>
                           <p className="text-2xl"><strong>{item.titulo}</strong></p>
@@ -722,13 +722,19 @@ export default function Guardar() {
                             </div>
                           )}
 
-                          <div className="flex flex-col gap-2 mt-2 items-center">
-                            {item.temporada && item.epsodio && (
-                              <p className="bg-[#171344] p-1 px-3 rounded-2xl font-bold border border-gray-300/20">
-                                Temporada: {item.temporada} | Epsódio: {item.epsodio}
+                          <div className="flex gap-3 flex-wrap mt-2 items-center justify-center">
+                            {item.temporada && (
+                              <p className="bg-[#171344] p-1 px-2 rounded-2xl font-bold border border-gray-300/20">
+                                Temporada: {item.temporada}
                               </p>
                             )}
-                            <p className="bg-[#171344] p-1 px-3 rounded-2xl font-bold border border-gray-300/20">Tempo: {item.tempo}</p>
+
+                            {item.epsodio && (
+                              <p className="bg-[#171344] p-1 px-2 rounded-2xl font-bold border border-gray-300/20">
+                                Episódio: {item.epsodio}
+                              </p>
+                            )}
+                            <p className="bg-[#171344] p-1 px-2 rounded-2xl font-bold border border-gray-300/20">Tempo: {item.tempo}</p>
                           </div>
                         </div>
 
@@ -745,7 +751,7 @@ export default function Guardar() {
                       </div>
                     ))}
                   </div>
-                  
+
                   {itensDoTipo.length > 3 && (
                     <button
                       type="button"
