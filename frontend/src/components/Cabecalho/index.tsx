@@ -28,7 +28,7 @@ function Cabecalho() {
 
             <div className="w-[120px] hidden md:block"></div>
 
-            <nav className="flex gap-4 sm:gap-10 justify-center sm:justify-start items-center">
+            <nav className="flex gap-4 sm:gap-11 justify-center sm:justify-start items-center">
                 <Link to="/" className="sm:text-lg">Assistindo</Link>
                 <Link to="/pretendo">Quero Assistir</Link>
             </nav>
